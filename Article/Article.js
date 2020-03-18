@@ -112,3 +112,26 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+function createComp(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const div = document.createElement('div')
+  const h2 = document.createElement('h2')
+  const p = document.createElement('p')
+  const p1 = document.createElement('p')
+  const p2 = document.createElement('p')
+  const p3 = document.createElement('p')
+  const span = document.createElement('span')
+
+  div.classList.add('article')
+  p1.classList.add('date')
+  span.classList.add('expandButton')
+
+  div.append(h2, p, p1, p2, p3, span)
+
+  h2.textContent = title
+  p.textContent = date
+  p1.textContent = firstParagraph
+  p2.textContent = secondParagraph
+  p3.textContent = thirdParagraph
+
+  return div
+};
